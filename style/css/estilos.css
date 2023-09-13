@@ -1,0 +1,144 @@
+.menu_index{
+    /* background: rgb(249, 252, 249); */ */
+    background: transparent; */
+    margin: auto;
+    padding: 1rem;
+    border: blue ;
+    /* 4px solid rgba(255, 0, 0, 0.753) */
+    width: 600px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+.prue{
+    background: rgb(1, 12, 4);
+}
+.in{
+    background-image: url("../imagenes/fon2.jpeg");
+    background-repeat: no-repeat;
+     background-size: cover;
+}
+    .botones{
+    background: transparent;
+    margin: auto;
+    padding: 1rem;
+    border: transparent;
+    width: 700px;
+    height: 550px;
+    margin-top: 140px;
+    
+}
+.boton{
+    background: #8db5cc;
+    margin: auto;
+    padding: 1rem;
+    border: 4px solid rgba(195, 202, 219, 0.753);
+    width: 300px;
+    height: 75px;
+}
+
+.tabla {
+    align-items: center;
+    width: 100px;
+    border: 2px solid rgb(0, 0, 0);
+}
+th, td {
+    width: 10%;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;  
+}
+.menu_consult{
+    background: rgb(239, 243, 243);
+    margin: auto;
+    padding: 1rem;
+    border: 8px solid rgb(174, 17, 185);
+    width: 2500px;
+    height: 300px;
+    align-items: center;
+}
+
+ .labelmenu{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.diferencia{
+    width: 180px;
+    height: 100px;
+    font-size: 30px;
+}
+
+label{
+    display: inline-block;
+    width: 150px;
+  }
+
+.cerrar{
+    display: inline-block;
+    margin-top: 35px;
+    background-color: rgba(29, 127, 207, 0.904);
+    padding: 20px 40px;
+    color: white;
+    text-decoration: none;
+
+}
+
+.cerrar:hover{
+    background-color: rgba(1, 16, 27, 0.904);
+}
+
+.tabla-f {
+    align-items: center;
+    width: 250px;
+    border: 2px solid rgb(0, 0, 0);
+}
+th, td {
+    width: 20%;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 0.3em;
+    font-size: 75%;
+}
+
+.labelmenu-f{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.labelmenu-f2{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.cuadros1{
+    color:black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+input{
+    border: 4px solid rgba(29, 2, 2, 0.753);
+}
+
+.img_index{
+    margin-top: 80px;
+}
+
+.img_menu{
+    margin-top: 0px;
+    height: 0px;
+    
+}
