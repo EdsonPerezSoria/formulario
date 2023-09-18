@@ -20,7 +20,7 @@ include "configs/funciones.php";
 <div class="botones">
 <center>
   <h1>MENU</h1>
-  Bienvenido : <?php echo $_SESSION['username']; ?> eligue una de las siguientes opciones
+  Bienvenido : <?php echo $_SESSION['username']; ?> eligue una de las siguientes opciones <?php echo $_SESSION['rol']; ?>
   <br><br><br><br><br>
   <button class="boton" type="submit" name="enviar" onclick="menu()">Power BI</button>
   <button class="boton" type="submit" name="enviar" onclick="formulario()">Liquidacion</button>

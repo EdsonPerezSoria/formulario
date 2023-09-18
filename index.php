@@ -5,41 +5,62 @@ session_start([
 if(!isset($_SESSION['username'])){
   
   }else{
-    header('location:menu.php'); 
+    $ro=$_SESSION['rol'];
+    $red="menu_$ro.php";
+    header("location: ".$red); 110
   }
 include "configs/config.php";
-include "configs/funciones.php";
-$con=mysqli_connect($host_mysql,$user_mysql, $pass_mysql,$db_mysql);
+
+
 
 	if (isset($_POST['logear'])){
-        $usuario = $_POST ['usuario'];
-	    $contra = $_POST ['contra']; 
-
+    $usuario = $_POST ['usuario'];
+	  $contra = $_POST ['contra'];
+    
         $q=mysqli_query($con, "call Login('$usuario','$contra')");
         $array = mysqli_fetch_array($q);
         
         if(is_array($array)){
-        if($array['id_rol']==1){
+          if($array['id_rol']==1){
           $_SESSION['username'] = $usuario;
-        header("location: menu.php");
-        }else
+
+          header("location: menu_1.php");
+          }else
           if ($array['id_rol']==2){
             $_SESSION['username'] = $usuario;
-            header("location: formbase.php");
-          }else{
-          echo "Usuario o contraseña incorrecto";
-        }
-      }else{
+            header("location: menu_2.php");
+          }else
+          if ($array['id_rol']==3){
+            $_SESSION['username'] = $usuario;
+            $_SESSION['rol']=$array['id_rol'];
+            header("location: menu_3.php");
+          }else
+          if ($array['id_rol']==4){
+          $_SESSION['username'] = $usuario;
+          header("location: menu_4.php");
+          }else
+          if ($array['id_rol']==5){
+            $_SESSION['username'] = $usuario;
+            header("location: menu_5.php");
+          }else
+          if ($array['id_rol']==6){
+            $_SESSION['username'] = $usuario;
+            header("location: menu_6.php");
+          }
+        }else{
         echo "Usuario o contraseña incorrecto";
       }
-    }
+      // $rol=mysqli_query($con, "SELECT id_rol FROM admins WHERE usuario='$usuario'");
+      // $_SESSION['rol']=$rol;
+  }
+
+  
       
-      if(isset($_GET['cerrar_sesion'])){
-        session_unset();
-        session_destroy();
-      } 
+      // if(isset($_GET['cerrar_sesion'])){
+      //   session_unset();
+      //   session_destroy();
+      // } 
 ?>
-</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
