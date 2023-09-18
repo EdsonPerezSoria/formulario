@@ -23,7 +23,7 @@ include "configs/config.php";
             if($array['id_rol']==1){
             $_SESSION['username'] = $usuario;
             $_SESSION['rol']=$array['id_rol'];
-          header("location: menu_1.php");
+            header("location: menu_1.php");
             }else
             if ($array['id_rol']==2){
             $_SESSION['username'] = $usuario;
@@ -56,13 +56,6 @@ include "configs/config.php";
       // $rol=mysqli_query($con, "SELECT id_rol FROM admins WHERE usuario='$usuario'");
       // $_SESSION['rol']=$rol;
   }
-
-  
-      
-      // if(isset($_GET['cerrar_sesion'])){
-      //   session_unset();
-      //   session_destroy();
-      // } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
