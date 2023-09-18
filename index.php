@@ -7,10 +7,9 @@ if(!isset($_SESSION['username'])){
   }else{
     $ro=$_SESSION['rol'];
     $red="menu_$ro.php";
-    header("location: ".$red); 110
+    header("location: ".$red);
   }
 include "configs/config.php";
-
 
 
 	if (isset($_POST['logear'])){
@@ -21,32 +20,36 @@ include "configs/config.php";
         $array = mysqli_fetch_array($q);
         
         if(is_array($array)){
-          if($array['id_rol']==1){
-          $_SESSION['username'] = $usuario;
-
-          header("location: menu_1.php");
-          }else
-          if ($array['id_rol']==2){
+            if($array['id_rol']==1){
             $_SESSION['username'] = $usuario;
+            $_SESSION['rol']=$array['id_rol'];
+          header("location: menu_1.php");
+            }else
+            if ($array['id_rol']==2){
+            $_SESSION['username'] = $usuario;
+            $_SESSION['rol']=$array['id_rol'];
             header("location: menu_2.php");
-          }else
-          if ($array['id_rol']==3){
+            }else
+            if ($array['id_rol']==3){
             $_SESSION['username'] = $usuario;
             $_SESSION['rol']=$array['id_rol'];
             header("location: menu_3.php");
-          }else
-          if ($array['id_rol']==4){
-          $_SESSION['username'] = $usuario;
-          header("location: menu_4.php");
-          }else
-          if ($array['id_rol']==5){
+            }else
+            if ($array['id_rol']==4){
             $_SESSION['username'] = $usuario;
+            $_SESSION['rol']=$array['id_rol'];
+            header("location: menu_4.php");
+            }else
+            if ($array['id_rol']==5){
+            $_SESSION['username'] = $usuario;
+            $_SESSION['rol']=$array['id_rol'];
             header("location: menu_5.php");
-          }else
-          if ($array['id_rol']==6){
+            }else
+            if ($array['id_rol']==6){
             $_SESSION['username'] = $usuario;
+            $_SESSION['rol']=$array['id_rol'];
             header("location: menu_6.php");
-          }
+            }
         }else{
         echo "Usuario o contraseña incorrecto";
       }
