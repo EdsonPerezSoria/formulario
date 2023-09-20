@@ -142,3 +142,53 @@ input{
     height: 0px;
     
 }
+
+.peticiones{
+    background: white;
+    margin: auto;
+    padding: 3rem;
+    border: rgb(20, 1, 1) solid;
+    /* 4px solid rgba(255, 0, 0, 0.753) */
+    width: 1000px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+}
+
+.cuadros1_pet{
+    color: black;
+    font-size: 100%;
+    display: flex;
+    width: 80%;
+}
+
+.cuadros2_pet{
+    font-size: 150%;
+    width: 80%;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.etiquetas_pet{
+    
+    font-size: 150%;
+    width: 100%;
+    margin-left:30px;
+    margin-right: 50px;
+}
+
+.botonespet{
+    
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin-left:10%;
+}
+
+.botonespet button{
+    font-size: 20px;
+    background-color: rgb(157, 229, 163);
+    width: 150px;
+}

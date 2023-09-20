@@ -30,6 +30,8 @@ include "configs/funciones.php";
   <br><br><br>
   <button class="boton" type="submit" name="enviar" onclick="instalaciones()">Levantar un ticket de INSTALACIONES</button>
   <button class="boton" type="submit" name="enviar" onclick="autoventas()">Seguimiento Autoventas</button>
+  <br><br><br>
+  <button class="boton" type="submit" name="enviar" onclick="peticiones()">Peticiones</button>
 </center>
 </form>
 </div> 
@@ -56,5 +58,9 @@ include "configs/funciones.php";
 
       function autoventas() {
         window.location.href = "https://app.powerbi.com/view?r=eyJrIjoiODQxNzQwNTgtOWY4OC00MDYwLTllNTEtNzhhM2MyMDFmYjVjIiwidCI6ImVkZDhhNmM1LTIxYTItNGJiZi1iM2UzLWQ5Y2NiMWJlNzdhYyJ9";
+      }
+
+      function peticiones() {
+        window.location.href = "formpet.php";
       }
   </script>

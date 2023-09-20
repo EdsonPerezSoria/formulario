@@ -20,7 +20,7 @@ Bienvenido : <?php echo $_SESSION['username']; ?>
 <form method="POST">
 <center>
 Proveedor
-<input type="text" name="proveedor" required> </input>
+<input type="text" name="proveedor" placeholder="Proveedor" required> </input>
 
 
 Factura: 

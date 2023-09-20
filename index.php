@@ -10,7 +10,7 @@ if(!isset($_SESSION['username'])){
     header("location: ".$red);
   }
 include "configs/config.php";
-
+include "configs/funciones.php";
 
 	if (isset($_POST['logear'])){
     $usuario = $_POST ['usuario'];
