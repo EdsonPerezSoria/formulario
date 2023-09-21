@@ -206,3 +206,7 @@ th, td {
 .prue{
     background: rgb(169, 243, 196);
 }
+
+.status{
+    width: 30px;
+}

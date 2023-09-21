@@ -106,7 +106,7 @@ include "configs/funciones.php";
          <div class="botonespet">
                 <button type="submit" name="regresar">Regresar</button>
                 <button type="submit" name="enviar">Enviar</button>
-                <button type="submit" name="solicitudes">soli</button>
+                <button type="submit" name="solicitudes">Solicitudes</button>
 		</div>  
 	</form>
 	

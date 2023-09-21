@@ -1,7 +1,11 @@
-<?php 
+<?php
+session_start();
+if(!isset($_SESSION['username'])){	
+  header('location:https://mi-info.com/');
+  }
+  $usuario = $_SESSION['username'];
 include "configs/config.php";
 include "configs/funciones.php";
-$con=mysqli_connect($host_mysql,$user_mysql, $pass_mysql,$db_mysql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +37,7 @@ $con=mysqli_connect($host_mysql,$user_mysql, $pass_mysql,$db_mysql);
         </tr>
         </thead>
         <?php
-            $prod= mysqli_query($con,"SELECT proveedor,factura,folio_fiscal,breve_descripcion,descripcion_gasto,centro_negocios,sub_total,iva,total,estatus,fecha  from formpet");
+            $prod= mysqli_query($con,"SELECT proveedor,factura,folio_fiscal,breve_descripcion,descripcion_gasto,centro_negocios,sub_total,iva,total,estatus,fecha  from formpet where usuario= '$usuario'");
              while ($rp=mysqli_fetch_array($prod)) {
                 ?>
             <tr>    
@@ -46,18 +50,21 @@ $con=mysqli_connect($host_mysql,$user_mysql, $pass_mysql,$db_mysql);
                 <td> <?=$rp['sub_total']?>    </td>
                 <td> <?=$rp['iva']?>    </td>
                 <td> <?=$rp['total']?>    </td>
-                <td> <?=$rp['estatus']?>    </td>
+                <td> <img class="status" src="style/imagenes/blanco.jpeg"/></td>
                 <td> <?=$rp['fecha']?>    </td>
-   
             </tr>
             <?php
         }
         ?>
 
 </table>
-                
+             
+        
     </div>
-    
+    <div class="botonespet">
+                <button ><a href="formpet.php" > Nueva Solicitud </a></button>
+                <button ><a href="cerrar.php" > Salir </a></button>
+		</div>
     
 </body>
 </html>
