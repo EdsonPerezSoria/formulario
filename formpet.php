@@ -16,12 +16,6 @@ include "configs/funciones.php";
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Formulario de Ventas</title>
 	<script type="text/javascript">
-		function calcularTotal() {
-			var venta_neta = parseFloat(document.getElementById("venta_neta").value);
-            var dummy = parseFloat(document.getElementById("dummy").value);
-			var total_liquidar = venta_neta + dummy;
-			document.getElementById("total_liquidar").value = total_liquidar.toFixed(2);
-		}
 		function anular(e) {
         tecla = (document.all) ? e.keyCode : e.which;
         return (tecla != 13);
@@ -44,8 +38,8 @@ include "configs/funciones.php";
                         </div>
                         <br>
                     <div class="cuadros1_pet">
-                        <input class="cuadros1_pet" id="proveedor" name="proveedor" placeholder="Proveedor" required>
-                        <select class="cuadros1_pet" name="factura" required>
+                        <input class="cuadros1_pet" id="proveedor" name="proveedor" placeholder="Proveedor">
+                        <select class="cuadros1_pet" name="factura">
 							<option hidden selected>Selecciona una opción</option>	
      						<option>si</option>
      						<option>no</option>
@@ -67,8 +61,8 @@ include "configs/funciones.php";
                         </div>
                         <br>
                     <div class="cuadros1_pet">
-                        <input class="cuadros1_pet" type="text" id="breve" name="breve" placeholder="Descripcion del trabajo" required>
-                        <select class="cuadros1_pet" name="descripcion" required>
+                        <input class="cuadros1_pet" type="text" id="breve" name="breve" placeholder="Descripcion del trabajo">
+                        <select class="cuadros1_pet" name="descripcion" >
 							<option hidden selected>Selecciona una opción</option>
      						<option>Mobiliario</option>
      						<option>Otros Gastos</option>
@@ -79,7 +73,7 @@ include "configs/funciones.php";
 	 						<option>Pasajes</option>
 	 						<option>Hospedaje</option>
    						</select>
-						   <select class="cuadros1_pet" name="negocio" required>
+						   <select class="cuadros1_pet" name="negocio" >
 						   <option hidden selected>Selecciona una opción</option>
      						<option>Aeropuerto</option>
      						<option>Bajio</option>
@@ -104,17 +98,18 @@ include "configs/funciones.php";
                     </div>
                         <br>
                     <div class="cuadros1_pet">
-                        <input class="cuadros2_pet" type="text" id="total" name="total" placeholder="Total" required>
+                        <input class="cuadros2_pet" type="text" id="total" name="total" placeholder="Total">
                     </div>    
 		</center>  
 
 		<br><br><br>
-        <div class="botonespet">
+         <div class="botonespet">
                 <button type="submit" name="regresar">Regresar</button>
                 <button type="submit" name="enviar">Enviar</button>
-                <button type="reset" name="solicitudes">Solicitudes</button>
-        </div>
+                <button type="submit" name="solicitudes">soli</button>
+		</div>  
 	</form>
+	
 </body>
 </html>
 
@@ -145,6 +140,14 @@ if(isset($_POST['enviar'])){
 
 	alert("Registro exitoso");
 
- }
-?>
+}
 
+if(isset($_POST['solicitudes'])){
+	header("location: solicitudes.php");
+}
+
+if(isset($_POST['regresar'])){
+	header("location: index.php");
+}
+
+?>

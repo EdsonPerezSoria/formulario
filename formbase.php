@@ -60,7 +60,7 @@ include "configs/funciones.php";
     	}
 	</script>
 </head>
-<body style="background-color:rgb(163, 238, 234)">
+<body style="background-color:rgb(169, 243, 196)">
 	<h1>Liquidación de Rutas</h1>
 	<form method="POST" onkeypress="return anular(event)">
 	Bienvenido <?php echo $_SESSION['username']; ?> <br><br>
@@ -144,8 +144,8 @@ include "configs/funciones.php";
 		<br><br>
         
         
-    <table class="tabla-f">
-    
+    <table>
+		<thead>
         <tr>
             <th>usuario</th>
             <th>ruta</th>
@@ -169,7 +169,7 @@ include "configs/funciones.php";
             <th>diferencia</th>
             <th>fecha</th>
         </tr>
-
+		</thead>
         <?php
             $prod= mysqli_query($con,"call Datos('$usuario')"); 
              while ($rp=mysqli_fetch_array($prod)) {

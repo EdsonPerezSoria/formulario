@@ -13,9 +13,6 @@
     transform: translate(-50%, -50%);
     color: black;
 }
-.prue{
-    background: rgb(1, 12, 4);
-}
 .in{
     background-image: url("../imagenes/fon2.jpeg");
     background-repeat: no-repeat;
@@ -40,20 +37,6 @@
     height: 75px;
 }
 
-.tabla {
-    align-items: center;
-    width: 100px;
-    border: 2px solid rgb(0, 0, 0);
-}
-th, td {
-    width: 10%;
-    font-weight: bold;
-    text-align: center;
-    vertical-align: top;
-    border: 1px solid #000;
-    border-collapse: collapse;
-    padding: 0.3em;  
-}
 .menu_consult{
     background: rgb(239, 243, 243);
     margin: auto;
@@ -64,7 +47,7 @@ th, td {
     align-items: center;
 }
 
- .labelmenu{
+.labelmenu{
     text-align: center;
     font-size: 25px;
     font-weight: bold;
@@ -100,16 +83,7 @@ label{
     width: 250px;
     border: 2px solid rgb(0, 0, 0);
 }
-th, td {
-    width: 20%;
-    font-weight: bold;
-    text-align: center;
-    vertical-align: top;
-    border: 1px solid #000;
-    border-collapse: collapse;
-    padding: 0.3em;
-    font-size: 75%;
-}
+
 
 .labelmenu-f{
     text-align: center;
@@ -191,4 +165,44 @@ input{
     font-size: 20px;
     background-color: rgb(157, 229, 163);
     width: 150px;
+}
+
+table{
+    margin: 100px auto;
+    background: rgb(127, 236, 236);
+    width: 600px;
+    width: 80%;
+}
+
+thead{
+    background-color: rgb(16, 136, 86);
+    border-bottom: solid 5px rgb(20, 1, 1);
+    color:rgb(247, 253, 253);
+}
+
+tr:nth-child(even){
+    background-color: rgb(75, 196, 126);
+}
+
+tr:hover td{ 
+    background-color: ;
+    color: rgb(69, 12, 122);
+}
+
+th, td {
+    padding: 10px;
+}
+
+.titulopet{
+    margin: 80px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    align-content: center;
+    position: relative;
+}
+
+.prue{
+    background: rgb(169, 243, 196);
 }
